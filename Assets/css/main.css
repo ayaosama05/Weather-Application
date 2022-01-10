@@ -130,8 +130,11 @@ body{
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
-}
 
+}
+.card-header-config{
+    background-color: white;
+}
 .fixed-plugin .badge {
     border: 1px solid #fff;
     border-radius: 50%;
