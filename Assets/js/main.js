@@ -114,6 +114,8 @@ function switchMainColor(a) {
     txtColors[i].style.color = `var(--bs-${color})`;
   }
 }
+let WebModeClass = "bg-dark text-white";
+
 // Light Mode / Dark Mode
 function darkMode(el) {
   const text_dark = document.querySelectorAll(".text-dark");
@@ -128,6 +130,7 @@ function darkMode(el) {
     el.setAttribute("checked", true);
     /*  document.getElementById("weather-layout").style.backgroundImage =
       "url(Assets/imgs/street-bg-dark.jpg)";*/
+      WebModeClass = "bg-dark text-white";
     document.getElementById("weather-overlay").style.backgroundColor =
       "#00000063";
     for (var i = 0; i < text_dark.length; i++) {
@@ -147,7 +150,8 @@ function darkMode(el) {
     /*  document.getElementById("weather-layout").style.backgroundImage =
       "url(Assets/imgs/street-bg-light.jpg)";*/
     document.getElementById("weather-overlay").style.backgroundColor =
-      "#00000000";
+          "#00000000";
+      WebModeClass = "bg-white text-dark";
     for (var i = 0; i < text_white.length; i++) {
       text_white[i].classList.remove("text-white");
       text_white[i].classList.add("text-dark");
@@ -289,11 +293,11 @@ function displayLocationInfo() {
 //display today weather
 function displayTodayWeather() {
   let today = document.getElementById("today");
-  today.innerHTML = `<div class="card text-white">
-  <div class="card-header bg-dark d-flex justify-center">
+    today.innerHTML = `<div class="card ${WebModeClass}">
+  <div class="card-header d-flex justify-center">
     <h5 class="day">${todayWeather.date}</h5>
   </div>
-  <div class="card-body bg-dark">
+  <div class="card-body">
     <div class="card-title degree">
     <div class="row">
     <div class="col-md-6">
@@ -310,11 +314,11 @@ function displayTodayWeather() {
 
 function displayTomorrowWeather() {
   let tomorrow = document.getElementById("tomorrow");
-  tomorrow.innerHTML = `<div class="card text-white">
-  <div class="card-header bg-dark d-flex justify-content-between">
+    tomorrow.innerHTML = `<div class="card ${WebModeClass}">
+  <div class="card-header d-flex justify-content-between">
     <h5 class="day">${tomorrowWeather.date}</h5>
   </div>
-  <div class="card-body bg-dark">
+  <div class="card-body ">
     <div class="card-title degree">
     <div class="row">
     <div class="col-md-6">
@@ -331,11 +335,11 @@ function displayTomorrowWeather() {
 
 function displayNextTomorrowWeather() {
   let nextTomorrow = document.getElementById("nextTomorrow");
-  nextTomorrow.innerHTML = `<div class="card text-white">
-  <div class="card-header bg-dark d-flex justify-content-between">
+    nextTomorrow.innerHTML = `<div class="card ${WebModeClass}">
+  <div class="card-header  d-flex justify-content-between">
     <h5 class="day">${nextTomorrowWeather.date}</h5>
   </div>
-  <div class="card-body bg-dark">
+  <div class="card-body ">
     <div class="card-title degree">
     <div class="row">
     <div class="col-md-6">
