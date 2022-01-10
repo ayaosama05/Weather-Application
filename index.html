@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Responsive meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="Assets/imgs/weather-icon.png">
+    <!-- Bootstrap CSS -->
+    <link href="Plugins/bootstrap/bootstrap.min.css" rel="stylesheet" >
+    <!-- Font Awesome CSS -->
+    <link href="Plugins/fontawesome/css/all.min.css" rel="stylesheet"> 
+    <!-- Main CSS -->
+    <link href="Assets/css/main.css" rel="stylesheet" >
+    <title>Weather App</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-navbar bg-dark">
+        <div class="container container-fluid">
+            <a class="navbar-brand text-white" href="#">
+                <img src="Assets/imgs/weather-icon.png" alt="Logo" width="50" height="40" 
+                class="d-inline-block align-text-top">
+                Weather <span class="text-info main-Color">App</span>
+              </a>
+        </div>
+    </nav>
+    <div class="weather-layout">
+    <div class="weather-overlay" id="weather-overlay">
+        <div class="container">
+          <div class="row">
+            <div class="col-10 m-auto">
+              <div class="search d-flex mb-3 input-group-1 bg-more-dark focus-info shadow-main-color">
+                <input id="searchWeather" class="input-1 d-inline-block border-0 text-white" type="search" placeholder="Find your location .." aria-label="Search">
+                <button class="btn btn-primary d-inline-block bg-main-Color searchBtn" type="submit">Find</button>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5" id="weather-card">
+            <div class="col-12 col-md-4" id="today">
+              
+            </div>
+            <div class="col-12 col-md-4" id="tomorrow">
+              
+            </div>
+            <div class="col-12 col-md-4" id="nextTomorrow">
+              
+            </div>
+          </div>
+        </div>
+    </div>
+
+        <!-- Footer -->
+    <footer id="sticky-footer" class="flex-shrink-0 py-2 bg-dark text-white-50">
+      <div class="container text-center text-white">
+        <small>Copy Right  © <script>
+          document.write(new Date().getFullYear())
+        </script>
+        made with <i class="fa fa-heart" aria-hidden="true"></i> by
+        <a href="https://www.linkedin.com/in/aya-osama-71324513a/" class="font-weight-bold" target="_blank">
+          <span class="main-footer-Color">Aya Osama</span>
+          </a></small>
+      </div>
+    </footer>
+
+
+    <div class="fixed-plugin">
+        <a class="text-dark fixed-plugin-button bg-white">
+            <i class="fas fa-cog py-2"></i>
+        </a>
+        <div class="card shadow-lg">
+        <div class="card-header pb-0 pt-3">
+            <h5 class="card-title configuration-title">
+                <span>Configuration</span>
+                <button class="btn btn-link p-0 fixed-plugin-close-button pull-right text-info">
+                    <i class="fas fa-times"></i>
+                </button>
+            </h5>
+          <!-- End Toggle Button -->
+        </div>
+        <div class="card-body pt-sm-3 pt-0">
+          <!-- Sidebar Backgrounds -->
+          <div>
+            <h6 class="mb-0 pb-2">Sidebar Colors</h6>
+          </div>
+          <a href="javascript:void(0)" class="switch-trigger background-color">
+            <div class="badge-colors my-2 text-start">
+              <span class="badge filter bg-gradient-info active" data-color="info" onclick="switchMainColor(this)"></span>
+              <span class="badge filter bg-gradient-primary" data-color="primary" onclick="switchMainColor(this)"></span>
+              <span class="badge filter bg-gradient-success" data-color="success" onclick="switchMainColor(this)"></span>
+              <span class="badge filter bg-gradient-warning" data-color="warning" onclick="switchMainColor(this)"></span>
+              <span class="badge filter bg-gradient-danger" data-color="danger" onclick="switchMainColor(this)"></span>
+              <span class="badge filter bg-gradient-secondary" data-color="secondary" onclick="switchMainColor(this)"></span>
+
+            </div>
+          </a>
+         
+          <!-- Navbar Fixed -->
+          <hr class="horizontal dark my-3">
+          <div class="mt-2 d-flex">
+            <h6 class="mb-0">Light / Dark</h6>
+            <div class="form-check form-switch ps-0 ms-auto my-auto">
+              <input class="form-check-input mt-1 ms-auto"
+              checked = "checked"
+               type="checkbox" id="dark-version" onclick="darkMode(this)">
+            </div>
+          </div>
+          <hr class="horizontal dark my-sm-4">
+          <a class="btn btn-outline-dark w-100" href="">View documentation</a>
+          <div class="w-100 text-center">
+            <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star creativetimofficial/material-dashboard on GitHub">Star</a>
+            <h6 class="mt-3">Thank you for sharing!</h6>
+            <a href="https://twitter.com/intent/tweet?text=Check%20Material%20UI%20Dashboard%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23bootstrap5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fsoft-ui-dashboard" class="btn btn-dark mb-0 me-2" target="_blank">
+              <i class="fab fa-twitter me-1" aria-hidden="true"></i> Tweet
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/material-dashboard" class="btn btn-dark mb-0 me-2" target="_blank">
+              <i class="fab fa-facebook-square me-1" aria-hidden="true"></i> Share
+            </a>
+          </div>
+        </div>
+        </div>
+    </div>
+
+     <script src="Assets/js/main.js"></script>
+          <!-- Bootstrap JS -->
+     <script src="Plugins/bootstrap/bootstrap.min.js"></script>
+</body>
+</html>
