@@ -27,5 +27,20 @@ Weather application is a simple one-page application to get City weather.
  
  
    [PreviewURL]: <https://ayaosama05.github.io/Weather-Application/>
+   
+   
+### Installation
+
+1. Get a free API Key at [https://www.weatherapi.com/](https://www.weatherapi.com/)
+2. Clone the repo
+   ```sh
+   git clone https://github.com/ayaosama05/Weather-Application.git
+   ```
+3. Enter your API in `main.js`
+   ```js
+   const API_KEY = 'ENTER YOUR API';
+   ```
+
+
  
  
