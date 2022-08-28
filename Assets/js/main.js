@@ -176,7 +176,7 @@ function darkMode(el) {
 
 //Add event to input to get value entered by user
 let searchWeather = document.getElementById("searchWeather");
-const API_KEY = "90470864bfdc47b790f102656221001";
+const API_KEY = "ENTER YOUR API";
 searchWeather.addEventListener("keyup", getValueToSearch);
 
 let months = [
